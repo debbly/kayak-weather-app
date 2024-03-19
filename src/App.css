@@ -9,7 +9,8 @@
 }
 
 h1 {
-  margin-bottom: 20px; /* Add some spacing below the heading */
+  margin-bottom: 10px; /* Add some spacing below the subheading */
+  font-size: 10rem;
   text-align: center; /* Center text */
 }
 
@@ -23,7 +24,53 @@ h3 {
   text-align: center; /* Center text */
 }
 
+h4 {
+  font-family: "Theodor";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5rem;
+  line-height: 105%;
+  white-space: nowrap;
+  padding: 0 1.5vw;
+}
+
 p {
   margin-bottom: 10px; /* Add some spacing below paragraphs */
   text-align: center; /* Center text */
+}
+
+/* Basic styling for the text carousel container */
+.text-carousel-container {
+  overflow: hidden; /* Hide overflowing content */
+  width: 100%; /* Adjust as needed */
+}
+
+/* Styling for the text carousel */
+.text-carousel {
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: marquee 15s linear infinite; /* Adjust duration as needed */
+}
+
+.marquee {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  --offset: 20vw;
+  --move-initial: calc(-20% + var(--offset));
+  --move-final: calc(-40% + var(--offset));
+}
+
+.marquee-inner {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marquee 35s linear infinite;
+  animation-play-state: running;
+}
+
+/* Keyframe animation for the text carousel */
+@keyframes marquee {
+  0% { transform: translateX(100%); } /* Move text initially out of view to the right */
+  100% { transform: translateX(-100%); } /* Move text to the left */
 }

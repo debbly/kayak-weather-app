@@ -19,7 +19,6 @@ const WeatherInfo: React.FC = () => {
 
   useEffect(() => {
     const fetchWeather = async () => {
-      console.log(OPENWEATHER_API_KEY);
       try {
         //lat, long set for Oakland, CA
         const response = await axios.get(

@@ -7,7 +7,16 @@ import './App.css';
 const App: React.FC = () => {
   return (
     <div className="App">
-      <h1>Will I have a good time kayaking right now?</h1>
+      <div className="marquee">
+        <div className="marquee-inner">
+          <h4>Will I have a good time kayaking?</h4>
+          <h4>Will I have a good time kayaking?</h4>
+          <h4>Will I have a good time kayaking?</h4>
+          <h4>Will I have a good time kayaking?</h4>
+          <h4>Will I have a good time kayaking?</h4>
+          <h4>Will I have a good time kayaking? Will I have a good time kayaking? Will I have a good time kayaking?</h4>
+        </div>
+      </div>
       <WeatherInfo />
     </div>
   );
